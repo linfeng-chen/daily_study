@@ -77,3 +77,4 @@ print(number1)
 number1=number[:4]
 print(number1)
 ###此上为均为浅拷贝
+##演示效果
