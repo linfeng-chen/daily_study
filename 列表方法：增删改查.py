@@ -30,11 +30,18 @@ print(x)
 # 如果指定的元素不存在，那么会报错
 x.remove("her")
 print(x)
-# pop 函数：根据下表删除对象
+# pop 函数：根据下标删除对象
+#可使用pop函数返回剔除的值以便其他作用
+
 x.pop(0)
 print(x)
 # clean 函数：可直接清空列表
 x.clear()
+print(x)
+x=[1,2,3,4,5]
+print(x)
+#del ()
+del x[0]
 print(x)
 
 # 改
@@ -46,12 +53,13 @@ print(heros)
 heros[3:]=["超人","蜘蛛侠","惊奇队长"]
 print(heros)
 
-# 对数据进行排序，sort函数从小到大，reverse()将数据反转，从而达到从大到小的作用
-
+# 对数据进行排序，sort函数从小到大，reverse=True 参数将数据顺序相反，从而达到从大到小的作用
+# sorted 函数将数据进行临时排序，不改变源列表的顺序，但sort会改变
+# reverse()函数也可单独将数据反转
 number=[3,6,4,1,8,9,34]
 print(number)
 number.sort()
-number.reverse()
+# number.reverse()
 print(number)
 number=[3,6,4,1,8,9,34]
 print(number)
