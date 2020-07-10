@@ -24,3 +24,8 @@ print(not 1 or 0 and 1 or 3 and 4 or 5 and 6 or 7 and 8 and 9)
 print(not 1 or 5 and 1)
 print(not 1)
 print(not 1 or 0 and 3 or 6 and 9 )
+# 检查特定的值是否包含在列表中，in
+num=[1,2,3,4,5]
+print(8 in num)
+# 检查特定值不在列表中 ，not in
+print(8 not in num)

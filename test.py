@@ -49,3 +49,7 @@ print(num_1)
 num_1.append(999)
 print(num)
 print(num_1)
+
+car = 'subaru'
+print("is car=='subaru'? i prediict True")
+print(car=='subaru')
