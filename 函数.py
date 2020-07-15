@@ -95,16 +95,56 @@ def make_pizza(size,*toppings):
 make_pizza(15,"meat",'peat','mosd')
 # 使用任意数量的关键字实参
 # 当不知道传递给函数的是什么样的信息时，可将函数编写成能够接收任意数量键值对
-# def build_user(name,**infomation):
-#     '''创建一个字典用来存储用户信息'''
-#     peoson={}
-#     peoson['name']=name.title()
-#     for key,value in infomation.items():
-#         peoson[key.title()]=value
-#     return peoson
-# person=build_user('chen linfeng',location="beijin",age=20)
-# print(person)
+def build_user(name,**infomation):
+    '''创建一个字典用来存储用户信息'''
+    peoson={}
+    peoson['name']=name.title()
+    for key,value in infomation.items():
+        peoson[key.title()]=value
+    return peoson
+person=build_user('chen linfeng',location="beijin",age=20)
+print(person)
 # 形参的 ** 创建一个空字典
 
 # 将函数储存在模块中
 # 要让函数是可导入的，得先创建模块，模块为.py的未见，包含要导入到程序的代码
+# module_name.funcation_name() 模块名称.功能名称（）
+# 导入特定函数
+# from module_name import funcation_name
+# from module_name import funcation_0,funcation_1
+# 当使用上述两种方法时，在使用时无需写出模块名称，即文件名
+# 使用（*）导入所有函数 from moudle_name import *
+# 使用 as 给函数指定别名
+# from module_name.import funcation_name as need_name
+# 使用as 给模块指定别名
+# import moudle_name as need_name
+
+
+# 匿名函数
+# lambda 表达式
+def add(number):
+    return number**2
+print(add(5))
+x=lambda number:number**2
+print(x(5))
+# lambda 表达式可以将函数转换为简单形式
+
+# filter() 过滤器
+help(filter)
+# filter(function,可迭代对象)
+# 1.当function 为none时,返回值为真的对象
+x=list(filter(None,[1,2,3,0,True]))
+print(x)
+# 2.当function 有定义时,需要将可迭代对象代入函数进行筛选
+def choice(x):
+    return x%2
+temp=range(10)
+show=list(filter(choice,temp))
+print(show)
+temp=range(20)
+show=list(filter(lambda x:x%2,temp))
+print(show)
+
+# map()映射
+show=list(map(lambda x:x**2,temp))
+print(show)

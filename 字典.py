@@ -49,3 +49,16 @@ for language in set(favorite.values()):
 language=set(favorite.values())
 print(language)
 
+# 创建字典
+dict1=dict(((1,'wd'),(2,"sf"),(3,"dfdf")))
+print(dict1)
+# fromkeys(s,[v])
+dict2={}
+dict2=dict2.fromkeys((1,2,3),'num')
+print(dict2)
+# 所有键对应后面的同一个值
+
+# setdefault 检查字典是否含有这个键值对,若没有,则添加进去
+dict2.setdefault(4,"sdsd")
+print(dict2)
+# updata也可添加键值对

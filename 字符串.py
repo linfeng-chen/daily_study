@@ -29,7 +29,7 @@ lang=lang.lstrip()
 print(lang+"\n")
 # import this
 # capitalize(),titile()将字符串第一个字符变成大写
-str_1="chen linfeng"
+str_1="chen linfeng linfeng"
 str_1=str_1.capitalize()
 print(str_1)
 str_1="chen linfeng"
