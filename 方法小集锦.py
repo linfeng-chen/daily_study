@@ -27,3 +27,5 @@ b=['chenlinfeng',20,168]
 person=dict(zip(a,b))
 print(person)
 
+# 方法replace()将字符串中特定单词替换为另一个单词
+
