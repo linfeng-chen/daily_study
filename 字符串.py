@@ -56,18 +56,27 @@ print(str_1)
 # 关键字参数
 str_1="{a} {b} {c}".format(a="chenlinfeng",b="is",c="student")
 print(str_1)
+
+str_2 = "{}".format("hello")
+print(str_2)
+
 # 混合使用位置参数与关键字参数时需要将位置参数在前
 num="{0:.2f} {1}".format(23.2332,"not")
-print(num)
+print(type(num),num)
 # 字符串格式化意义
 # %c 格式化字符
 # %s 格式化字符串
 # %d 格式化整数 %o 格式化八进制数
-print('%c %c %c' %(97,98,99))
+print('%s %s %s' %(934,956,9))
 print('%s %s %s'%("sdsd","sdsdf","fgfg"))
+print('%c'%97)
 
 # enumerate()
 num=[1,3,45,8,56,234,5]
 num=dict(enumerate(num))
 print(num)
 # zip
+
+# eval(),将字符串转化为表达式
+expr = "2**5"
+print((eval(expr)))

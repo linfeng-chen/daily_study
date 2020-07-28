@@ -62,3 +62,13 @@ print(dict2)
 dict2.setdefault(4,"sdsd")
 print(dict2)
 # updata也可添加键值对
+
+# 集合：元素具有唯一性，但数值具有随机性，不支持索引
+# 创建集合
+set1 = set([1,2,3,4,2,1,])
+print(set1)
+# 不可变集合:frozenset()
+set1.add(0)
+set1= frozenset([1,2,3,4])
+set1.add(22)
+print(set1)

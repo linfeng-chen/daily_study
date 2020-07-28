@@ -1,15 +1,23 @@
 #读取文件
 
-with open('D:\新建文件夹\python\\no.txt') as file_object:
-    contents= file_object.read()
-    print(contents)
+# with open('D:\新建文件夹\python\\no.txt') as file_object:
+#     contents= file_object.read()
+#     print(contents)
 
 # 逐行读取
-filename = 'pi_digist.txt'
+filename = 'txt/pi_digist.txt'
 with open(filename) as file_object:
     for i in file_object:
         print(i.rstrip())
 
+with open(filename) as file_object:
+    x = file_object.readline()
+    print(x)
+    num =file_object.tell()
+    print(num)
+    file_object.seek(23,0)
+    num = file_object.tell()
+    print(num)
 
 # 使用关键字with时，文件对象只在with代码块中可用
 # 可将文件各行存储再列表中
@@ -29,10 +37,13 @@ print(pi_string,len(pi_string),end='')
 # 写入文件
 # 要将文本写入文件，你在调用open()时需要提供另一个实参，告诉Python你要写入打开的文件
 # 'w'表示写入模式，'r'表示只读模式，'a'附加模式，'r+'表示可读可写
+# writelines()
 
 filename = 'program.txt'
 with open(filename,'w') as file_object:
-    file_object.write("I love python\n"+'扶摇直上九万里')
+    file_object.write("I love python\n")
+    file_object.writelines(["2323","4523"])
+
 
 print("\n")
 with open(filename,'a') as file_object:
@@ -82,9 +93,14 @@ except FileNotFoundError:
     print(msg)
 
 # 分析文本
-title = 'chen linfeng is a student, he like computer'
-title = title.split()
-print(title)
+title = 'chen linfengisastudenthelikecomputer'
+(first,second) = title.split(" ")
+print(first)
 # 在执行遇到错误时不执行任何语句
 # pass 语句，其还可充当占位符
+# f.seek(offest,from),from(0表示起始位置，1代表当前位置，2代表文件末尾，偏移offset个字节
+# f.tell()
+
+
+
 

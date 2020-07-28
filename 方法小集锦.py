@@ -28,4 +28,11 @@ person=dict(zip(a,b))
 print(person)
 
 # 方法replace()将字符串中特定单词替换为另一个单词
+# 在局部使用全局变量使用global关键字
+# 在局部使用外部变量使用nonlocal关键字
+# s.disjoint(s1)判断s,s1是否没有交集
+# s.issubest(s1),判断s是否是s1的子集
+# s.union(s1)返回两者的并集
+# s.intersection(s1)返回交集
+# s.difference(s1)返回差集
 
