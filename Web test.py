@@ -1,16 +1,20 @@
-def checkio(data: list) -> list:
-   # data_copy = []
-   # for i in data:
-   #    if data.count(i)>1:
-   #       data_copy.append(i)
+from typing import Set, Iterable
+
+def triangular_islands(triangles: Set[int]) -> Iterable[int]:
+
+    # your code here
+    return []
 
 
-   return [i for i in data if data.count(i)>1]
+if __name__ == '__main__':
+    print("Example:")
+    print(sorted(triangular_islands({1})))
 
-if __name__ == "__main__":
-    #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert list(checkio([1, 2, 3, 1, 3])) == [1, 3, 1, 3], "1st example"
-    assert list(checkio([1, 2, 3, 4, 5])) == [], "2nd example"
-    assert list(checkio([5, 5, 5, 5, 5])) == [5, 5, 5, 5, 5], "3rd example"
-    assert list(checkio([10, 9, 10, 10, 9, 8])) == [10, 9, 10, 10, 9], "4th example"
-    print("It is all good. Let's check it now")
+    # These "asserts" are used for self-checking and not for an auto-testing
+    assert sorted(triangular_islands({1})) == [1]
+    assert sorted(triangular_islands({2, 3, 6})) == [3]
+    assert sorted(triangular_islands({4, 3})) == [2]
+    assert sorted(triangular_islands({1, 4, 7, 8})) == [1, 3]
+    assert sorted(triangular_islands({1, 2, 3, 4, 5, 6, 7, 8, 9})) == [9]
+    assert sorted(triangular_islands({1, 2, 4, 5, 7, 9})) == [1, 1, 1, 1, 1, 1]
+    print("Coding complete? Click 'Check' to earn cool rewards!")
