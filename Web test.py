@@ -1,19 +1,21 @@
-# using SendGrid's Python Library
-# https://github.com/sendgrid/sendgrid-python
-import os
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
+import numpy as np
+import  matplotlib.pyplot as plt
 
-message = Mail(
-    from_email='from_email@example.com',
-    to_emails='to@example.com',
-    subject='Sending with Twilio SendGrid is Fun',
-    html_content='<strong>and easy to do anywhere, even with Python</strong>')
-try:
-    sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-    response = sg.send(message)
-    print(response.status_code)
-    print(response.body)
-    print(response.headers)
-except Exception as e:
-    print(e.message)
+x = np.arange(-10,10,0.1)
+y = ((np.exp(x)-np.exp(-x))/(np.exp(x)+np.exp(-x)))
+
+plt.figure(figsize=(8,3))
+plt.plot(x,y,color='r')
+
+# 添加文字说明
+plt.text(-5.,0.9,r'$y =\tanh(x)$',fontsize =13)
+# 设置坐标轴
+currentAxis = plt.gca()
+currentAxis.xaxis.set_label_text('x',fontsize =15)
+currentAxis.yaxis.set_label_text('y',fontsize =15)
+# plt.show()
+
+p = np.random.rand(10,10)
+print(p)
+q = (p>0)
+print(q)
