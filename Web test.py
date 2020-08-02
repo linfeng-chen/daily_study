@@ -1,20 +1,19 @@
-from typing import Set, Iterable
+# using SendGrid's Python Library
+# https://github.com/sendgrid/sendgrid-python
+import os
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
-def triangular_islands(triangles: Set[int]) -> Iterable[int]:
-
-    # your code here
-    return []
-
-
-if __name__ == '__main__':
-    print("Example:")
-    print(sorted(triangular_islands({1})))
-
-    # These "asserts" are used for self-checking and not for an auto-testing
-    assert sorted(triangular_islands({1})) == [1]
-    assert sorted(triangular_islands({2, 3, 6})) == [3]
-    assert sorted(triangular_islands({4, 3})) == [2]
-    assert sorted(triangular_islands({1, 4, 7, 8})) == [1, 3]
-    assert sorted(triangular_islands({1, 2, 3, 4, 5, 6, 7, 8, 9})) == [9]
-    assert sorted(triangular_islands({1, 2, 4, 5, 7, 9})) == [1, 1, 1, 1, 1, 1]
-    print("Coding complete? Click 'Check' to earn cool rewards!")
+message = Mail(
+    from_email='from_email@example.com',
+    to_emails='to@example.com',
+    subject='Sending with Twilio SendGrid is Fun',
+    html_content='<strong>and easy to do anywhere, even with Python</strong>')
+try:
+    sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+    response = sg.send(message)
+    print(response.status_code)
+    print(response.body)
+    print(response.headers)
+except Exception as e:
+    print(e.message)
