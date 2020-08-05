@@ -71,6 +71,10 @@ print('%s %s %s' %(934,956,9))
 print('%s %s %s'%("sdsd","sdsdf","fgfg"))
 print('%c'%97)
 
+e = 2.7344234234
+print(f"test is {e}") #与"test is {e}.".format(e=e)等效
+
+
 # enumerate()
 num=[1,3,45,8,56,234,5]
 num=dict(enumerate(num))
@@ -80,3 +84,18 @@ print(num)
 # eval(),将字符串转化为表达式
 expr = "2**5"
 print((eval(expr)))
+
+# center在两边添加字符让字符串居中
+print("chen linfeng".center(16,'*'))
+
+# 方法translate与replace一样替换字符串的特定部分，但不同的是它只能进行单字符替换。
+# 这个方法的优势在于能够同时替换多个字符，因此效率比replace高。
+
+# 使用translate前必须创建一个转换表。这个转换表指出了不同Unicode码点之间的转换关系
+# 方法maketrans，这个方法接受两个参数：两个长度相同的字符串，它们指定要将第一个字符串中的每个字符都替换为第二个字符串中的相应字符
+
+table = str.maketrans("cs","kz"," ")#第三个参数将指定字母删除
+print(table)
+x = "this is my creaze son".translate(table)
+print(x)
+
