@@ -5,7 +5,7 @@
 #     print(contents)
 
 # 逐行读取
-filename = 'txt/pi_digist.txt'
+filename = '../txt/pi_digist.txt'
 with open(filename) as file_object:
     for i in file_object:
         print(i.rstrip())

@@ -50,10 +50,10 @@ print(j)
 # Numpy提供了save和load接口，直接将数组保存成文件(保存为.npy格式)，或者从.npy文件中读取数组。
 # 产生随机数组a
 a = np.random.rand(3,3)
-np.save('txt\\a.npy', a)
+np.save('../txt/a.npy', a)
 
 # 从磁盘文件'a.npy'读入数组
-b = np.load('txt\\a.npy')
+b = np.load('../txt/a.npy')
 
 # 检查a和b的数值是否一样
 check = (a == b).all()

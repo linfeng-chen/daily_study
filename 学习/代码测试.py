@@ -1,5 +1,5 @@
 import unittest
-from pree import get_formatted_name
+from 学习.pree import get_formatted_name
 
 '''模块unittestt提供了代码测试工具'''
 # 创建测试用例

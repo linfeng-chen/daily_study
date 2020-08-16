@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 # 图像是由像素点构成的矩阵，其数值可以用ndarray来表示
-image = Image.open('txt\\bas.jpg')
+image = Image.open('../txt/bas.jpg')
 image = np.array(image)
 # 查看数据形状，其形状是[H, W, 3]，
 # 其中H代表高度， W是宽度，3代表RGB三个通道

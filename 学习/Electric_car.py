@@ -1,4 +1,4 @@
-from car import Car
+from 学习.car import Car
 
 class Battery():
     '''将Electriccar 部分功能迁移到Battery中'''

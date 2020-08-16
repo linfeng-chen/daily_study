@@ -6,7 +6,7 @@ import pickle
 
 
 my_str = [12323,"chen linfeng",2324,['sdasd']]
-file_name="txt\my_str.pickl"
+file_name= "../txt/my_str.pickl"
 with open(file_name,'wb') as obj:
     pickle.dump(my_str,obj)
 
