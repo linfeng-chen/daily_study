@@ -44,6 +44,8 @@ class Descriptor:
         if obj.isallowdel_username == True:
             del self.tmpvar
     #声明一个类（邮箱）
+
+
 class Email:
     #成员属性
     username = Descriptor()#用户名 交给描述符管理 [交接行为]
@@ -59,4 +61,4 @@ print(mail.username)
 # 删除用户名的操作
 
 del mail.username
-# print(mail.username)
+#print(mail.username)
