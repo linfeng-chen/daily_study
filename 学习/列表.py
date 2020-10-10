@@ -34,3 +34,4 @@ print(str(min(numbers))+"\n"+str(max(numbers))+"\n"+str(sum((numbers))))
 # 列表解析
 squares=[i**2 for i in range(1,11)]
 print(squares)
+
